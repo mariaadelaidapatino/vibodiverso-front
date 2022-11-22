@@ -1,0 +1,11 @@
+#twitter,
+#intagram,
+#facebook{
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    border: #009efd;
+}
+
+
+#footer{
+    margin-top: auto;
+}
