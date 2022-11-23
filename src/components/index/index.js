@@ -1,9 +1,8 @@
 import React from "react";
 import biologa from "./biologa.png";
 import biologos from "./biologos.png"
-import portada from "./portada.jpg"
 import "./index.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default class inicio extends React.Component {
   constructor(props) {
@@ -17,13 +16,12 @@ export default class inicio extends React.Component {
       <>
         <div class="container1">
             <div class="info">
-                <h1>Biodiversidad de nuestro Pueblo</h1>
+                <h1>Biodiversidad de El Carmen de Viboral</h1>
                 <p>
                     Exaltamos la gran Biodiversidad que tiene El Carmen de Viboral. <br>                                       
                     </br>
                     Por que nuestro municipio es Viboral biodiverso
-                </p>
-                <button>Nosotros</button>
+                </p>                
             </div>
             <div class="image">
                 <img src={biologos} />
@@ -49,7 +47,7 @@ export default class inicio extends React.Component {
                 </div>
                 <div class="service">
                   <h3 class="n-service">
-                    <span class="number"> 3 </span> Identificacion
+                    <span class="number"> 3 </span> Identificación
                   </h3>
                   <p>Un biologo lo identificará</p>
                 </div>

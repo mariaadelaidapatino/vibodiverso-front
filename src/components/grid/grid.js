@@ -58,7 +58,7 @@ export default class DataGrid extends React.Component {
       formatter: (cell, row) =>{
         //console.log(row);
 
-        return (<Button onClick={() => this.props.onClickEditButton(row)}>
+        return (<Button class="btn" onClick={() => this.props.onClickEditButton(row)}>
           <FontAwesomeIcon icon={faEdit}/>
           </Button>
         ); 
@@ -71,7 +71,7 @@ export default class DataGrid extends React.Component {
       text:'Eliminar',
       formatter: (cell, row) => {
         return (
-          <Button onClick={() => this.props.onClickDeleteButton(row)}>
+          <Button class="btn" onClick={() => this.props.onClickDeleteButton(row)}>
             <FontAwesomeIcon icon={faTrash} />
           </Button>
         );
@@ -89,26 +89,26 @@ export default class DataGrid extends React.Component {
       <ToolkitProvider keyField="tp" data={this.state.rows} columns={this.props.columns} search>
         {(props) => (
           <>
-            <PaginationProvider pagination={paginationFactory(options)}>
+            <PaginationProvider c pagination={paginationFactory(options)}>
               {({ paginationProps, paginationTableProps }) => (
                 <>
                   <Row>
                     <Col>
-                      <SizePerPageDropdownStandalone {...paginationProps} />
+                      <SizePerPageDropdownStandalone  {...paginationProps} />
                     </Col>
                     <Col>
                       <SearchBar {...props.searchProps} />
                     </Col>
                   </Row>
 
-                  <BootstrapTable
+                  <BootstrapTable 
                     keyField="bt"
                     data={this.state.rows}
                     columns={this.props.columns}
                     {...paginationTableProps}
                     {...props.baseProps}
                   />
-                  <PaginationListStandalone {...paginationProps} />
+                  <PaginationListStandalone  {...paginationProps} />
                 </>
               )}
             </PaginationProvider>

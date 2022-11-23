@@ -4,6 +4,7 @@ import './navbar.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from "@fortawesome/free-solid-svg-icons"
 import Cookies from 'universal-cookie/es6';
+import logo from './logo.png'
 
 
 const cookies = new Cookies();
@@ -23,7 +24,11 @@ export default class menu extends React.Component {
     return (
       <Navbar fixed="top" variant="dark" expand="lg" id="navbar">
         <Container>
-          <Navbar.Brand href="/">Viboral Biodiverso</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <img src={logo} 
+            width="30px"/>
+            Viboral Biodiverso
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
