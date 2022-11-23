@@ -58,7 +58,7 @@ export default class DataGrid extends React.Component {
       formatter: (cell, row) =>{
         //console.log(row);
 
-        return (<Button class="btn" onClick={() => this.props.onClickEditButton(row)}>
+        return (<Button class="btn1" onClick={() => this.props.onClickEditButton(row)}>
           <FontAwesomeIcon icon={faEdit}/>
           </Button>
         ); 
@@ -71,7 +71,7 @@ export default class DataGrid extends React.Component {
       text:'Eliminar',
       formatter: (cell, row) => {
         return (
-          <Button class="btn" onClick={() => this.props.onClickDeleteButton(row)}>
+          <Button class="btn1" onClick={() => this.props.onClickDeleteButton(row)}>
             <FontAwesomeIcon icon={faTrash} />
           </Button>
         );
