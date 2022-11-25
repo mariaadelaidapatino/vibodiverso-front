@@ -66,10 +66,10 @@ export default class AvistamientosEditar extends React.Component {
   guardarAvistamientos(){
     this.setState({ loading: true});
     request
-    .post("/avistamientos", this.state.avistamiento)
+    .post("/avistamientos", this.state.avistamiento) //put
     .then((response)=>{
         if (response.data.exito){
-          this.setState({
+          this.setState({    // updateone
             rediret: response.data.exito,
             message:{
               text: response.data.msg,
